@@ -25,6 +25,14 @@ An AI-powered recipe assistant built with Next.js, TypeScript, and Supabase. Use
 
 [https://chefai.vercel.app](https://chefai.vercel.app) (replace with your actual Vercel URL)
 
+## 📋 Presentation Materials
+
+For the final presentation, see [docs/demo-plan.md](docs/demo-plan.md) which includes:
+- 5-7 minute demo flow
+- Technical highlights to explain
+- Pre-demo checklist
+- Plan B if live demo fails
+
 ## Local Development
 
 1. Clone the repository
