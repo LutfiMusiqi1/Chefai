@@ -9,6 +9,10 @@ An AI-powered recipe assistant built with Next.js, TypeScript, and Supabase. Use
 - 📚 Recipe Management - Save and manage personal recipes
 - 🔒 Row Level Security - Each user sees only their own data
 - 🎨 Modern UI - Built with Tailwind CSS
+- ⚙️ Robust Error Handling - Comprehensive edge case management
+- ✅ Input Validation - Character limits and format validation
+- 📡 Network Resilience - Handles offline mode, timeouts, and API failures
+- 🔄 Session Management - Automatic logout on expired sessions
 
 ## Tech Stack
 
@@ -38,6 +42,44 @@ An AI-powered recipe assistant built with Next.js, TypeScript, and Supabase. Use
    ```bash
    npm run dev
    ```
+
+## Database Setup
+
+Run the SQL in `supabase-setup.sql` in your Supabase SQL Editor to create the recipes table with RLS policies.
+
+## Edge Case Handling & Robustness
+
+The application implements comprehensive error handling for production stability:
+
+### Input Validation
+- **Empty Input Protection**: Prevents submission of blank messages/recipes
+- **Character Limits**: 
+  - AI messages: 5-1000 characters with real-time counter
+  - Recipe titles: Max 100 characters
+  - Recipe ingredients: Max 1000 characters
+- **Real-time Feedback**: Visual indicators (green → yellow → red) as limits approach
+
+### Network Resilience
+- **Offline Detection**: App notifies users when internet is unavailable
+- **API Timeout Handling**: 30-second timeout with specific error messages
+- **Retry Guidance**: Clear instructions when to retry failed operations
+- **Connection Type Handling**: Differentiates between network errors, timeouts, and server errors
+
+### User Session Management
+- **Expired Session Detection**: Automatically detects and handles JWT expiration (401 errors)
+- **Graceful Logout**: Redirect to login with clear message on auth failure
+- **Double Submit Prevention**: Disabled buttons during submission to prevent duplicate requests
+
+### Database Operations
+- **Loading States**: Clear spinners for recipe fetching and submission
+- **Transaction Safety**: Proper error handling for Supabase operations
+- **Auth Error Detection**: Catches and handles permission-based errors
+
+### API Error Categories
+- **429 (Rate Limit)**: "Too many requests, try again in a few seconds"
+- **503 (Service Unavailable)**: "AI service is unavailable, try later"
+- **Network Errors**: Distinguishes between connectivity and server issues
+- **Timeout Errors**: Suggests shorter messages or retry
 
 ## Database Setup
 
