@@ -100,7 +100,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\musiq\\OneDrive\\Desktop\\chefai",
+    "outputFileTracingRoot": "C:\\Users\\musiq\\OneDrive\\Documents\\GitHub\\Chefai",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -294,11 +294,11 @@ self.__SERVER_FILES_MANIFEST={
     "configFileName": "next.config.ts",
     "reactCompiler": true,
     "turbopack": {
-      "root": "C:\\Users\\musiq\\OneDrive\\Desktop\\chefai"
+      "root": "C:\\Users\\musiq\\OneDrive\\Documents\\GitHub\\Chefai"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "C:\\Users\\musiq\\OneDrive\\Desktop\\chefai",
+  "appDir": "C:\\Users\\musiq\\OneDrive\\Documents\\GitHub\\Chefai",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
